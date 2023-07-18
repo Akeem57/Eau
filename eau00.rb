@@ -16,3 +16,13 @@ $>
 000 n’est pas là parce que cette combinaison ne comporte pas exclusivement des chiffres différents 
 les uns des autres.
 =end
+
+# 1. Les fonctions
+
+# 2. La gestion d'erreur
+
+# 3. Le parse
+
+# 4. La résolution
+
+# 5. L'affichage
