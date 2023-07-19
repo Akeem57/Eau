@@ -18,16 +18,24 @@ les uns des autres.
 =end
 
 # 1. Les fonctions
-tableauChiffres = [0,1,2,3,4,5,6,7,8,9]
-
+chiffre = [0,1,2,3,4,5,6,7,8,9]
+results = []
+longTabChiffre = chiffre.length
+indexTabChiffre = 0
+a=0
+b=0
+c=0
+i = 0
+j = 0
 
 # 2. La gestion d'erreur
 
 # 3. Le parse
 
 # 4. La résolution
-
-tableauChiffres.each do |chiffre|
+while indexTabChiffre < longTabChiffre
+    results[j] = "#{chiffre[a]}#{chiffre[b]}#{chiffre[c]}"
+    j+=1 
     
 end
 
