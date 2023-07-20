@@ -23,11 +23,10 @@ def array3DigitNumber(min, max)
 end
 
 def has2SameDigit? (value)
-    valueInChar = value.to_s
-    (0..valueInChar.length).each do |index|
-        if valueInChar[index] == valueInChar[index+1] \
-            || valueInChar[index+1] == valueInChar[index+2] \
-            || valueInChar [index] == valueInChar[index+2]
+    (0..value.length).each do |index|
+        if value[index] == value[index+1] \
+            || value[index+1] == value[index+2] \
+            || value [index] == value[index+2]
             return true
         else
             return false 
@@ -35,11 +34,29 @@ def has2SameDigit? (value)
     end
 end
 
+def has2SameDigitBetween2Numbers (num1, num2)
+    (0..num1.length).each do |index1|
+        (0..num2.lentgh).each do |index2|
+            if num1[index1] == num2[index2] \
+                || num1[index1 + 1] == num2[index2] \ 
+                || num1[index1 + 2] == num2[index2] \
+                || num1[index1] == num2[index2+1] \
+                || num1[index1 + 1] == num2[index2 + 1] \
+                || num1[index1 + 2] == num2[index2 + 1] \
+                || num1[index1] == num2[index2 + 2] \
+                || num1[index1 + 1] == num2[index2 + 2] \
+                || num1[index1 + 2] == num2[index2 + 2] 
+                return true
+            else
+                return false
+            end
+        end
+    end
+end
+
 # 2. La gestion d'erreur
 
 # 3. Le parse
-
-# 4. La résolution
 numbers = array3DigitNumber(0,999)
 i=0
 finalArray = []
@@ -51,10 +68,17 @@ while i < numbers.length
     end
     i+=1
 end
+i=0
+j=0
+while i < 
 
-# 5. L'affichage
+
+
+# 4. La résolution
 finalArray.each do |num|
     if num != ""
-        puts "#{num} "
+        print "#{num} "
     end
 end
+puts ""
+# 5. L'affichage
