@@ -18,25 +18,43 @@ les uns des autres.
 =end
 
 # 1. Les fonctions
-chiffre = [0,1,2,3,4,5,6,7,8,9]
-results = []
-longTabChiffre = chiffre.length
-indexTabChiffre = 0
-a=0
-b=0
-c=0
-i = 0
-j = 0
+def array3DigitNumber(min, max)
+    (min..max).map {|digit| "%03d" % digit}
+end
+
+def has2SameDigit? (value)
+    valueInChar = value.to_s
+    (0..valueInChar.length).each do |index|
+        if valueInChar[index] == valueInChar[index+1] \
+            || valueInChar[index+1] == valueInChar[index+2] \
+            || valueInChar [index] == valueInChar[index+2]
+            return true
+        else
+            return false 
+        end
+    end
+end
 
 # 2. La gestion d'erreur
 
 # 3. Le parse
 
 # 4. La résolution
-while indexTabChiffre < longTabChiffre
-    results[j] = "#{chiffre[a]}#{chiffre[b]}#{chiffre[c]}"
-    j+=1 
-    
+numbers = array3DigitNumber(0,999)
+i=0
+finalArray = []
+while i < numbers.length
+    if has2SameDigit?(numbers[i]) 
+        finalArray[i] = ""
+    else 
+        finalArray[i] = numbers[i]
+    end
+    i+=1
 end
 
 # 5. L'affichage
+finalArray.each do |num|
+    if num != ""
+        puts "#{num} "
+    end
+end
