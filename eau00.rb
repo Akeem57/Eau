@@ -34,51 +34,33 @@ def has2SameDigit? (value)
     end
 end
 
-def has2SameDigitBetween2Numbers (num1, num2)
-    (0..num1.length).each do |index1|
-        (0..num2.lentgh).each do |index2|
-            if num1[index1] == num2[index2] \
-                || num1[index1 + 1] == num2[index2] \ 
-                || num1[index1 + 2] == num2[index2] \
-                || num1[index1] == num2[index2+1] \
-                || num1[index1 + 1] == num2[index2 + 1] \
-                || num1[index1 + 2] == num2[index2 + 1] \
-                || num1[index1] == num2[index2 + 2] \
-                || num1[index1 + 1] == num2[index2 + 2] \
-                || num1[index1 + 2] == num2[index2 + 2] 
-                return true
-            else
-                return false
-            end
-        end
+def hasSameDigitBetween2Numbers? (num1, num2)
+    num1 = num1.to_s.split('')
+    num2 = num2.to_s.split('')
+    if (num1 & num2).size == 3
+        return true
+            
+    else
+        return false
     end
 end
 
 # 2. La gestion d'erreur
 
 # 3. Le parse
-numbers = array3DigitNumber(0,999)
-i=0
-finalArray = []
-while i < numbers.length
-    if has2SameDigit?(numbers[i]) 
-        finalArray[i] = ""
-    else 
-        finalArray[i] = numbers[i]
-    end
-    i+=1
-end
-i=0
-j=0
-while i < 
-
-
 
 # 4. La résolution
-finalArray.each do |num|
-    if num != ""
-        print "#{num} "
+numbers = array3DigitNumber(0,999)
+
+finalArray = []
+numbers.each do |num|
+    if !has2SameDigit?(num) && !finalArray.any? { |other_num| hasSameDigitBetween2Numbers?(num, other_num) }
+        finalArray << num
     end
 end
-puts ""
+
 # 5. L'affichage
+finalArray.each do |num|
+    print "#{num} "   
+end
+puts ""
