@@ -52,15 +52,15 @@ end
 # 4. La résolution
 numbers = array_three_digit_number(0,999)
 
-finalArray = []
+final_array = []
 numbers.each do |num|
-    if !is_twoo_same_digit?(num) && !finalArray.any? { |other_num| is_same_digit_between_numbers?(num, other_num) }
-        finalArray << num
+    if !is_twoo_same_digit?(num) && !final_array.any? { |other_num| is_same_digit_between_numbers?(num, other_num) }
+        final_array << num
     end
 end
 
 # 5. L'affichage
-finalArray.each do |num|
+final_array.each do |num|
     print "#{num} "   
 end
 puts ""
