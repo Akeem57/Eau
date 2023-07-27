@@ -11,37 +11,43 @@ $>
 =end
 
 #1. Fonctions
-
-    chiffres = [0,1,2,3,4,5,6,7,8,9]
-    i=0
-    j=0
-    k=0
-    l=0
-    n=0
-    nombres = []
-    while i < chiffres.length
-        nombres[n] = "#{chiffres[i]}" + "#{chiffres[j]}" + " #{chiffres[k]}" + "#{chiffres[l]}"
-        l+=1
-        if l == chiffres.length
-            l=0
-            k+=1
-        end
-        if k == chiffres.length
-            k=0
-            j+=1
-        end
-        if j == chiffres.length
-        j=0
-        i+=1
-        end
-        n+=1
-    end
-    
+ 
 #2. Erreur
 
 #3. Parse
 
 #4. Résolution
+(0..99).each do |number1|
+    (number1+1..99).each do |number2|
+        print "#{format('%02d', number1)} #{format('%02d', number2)}, "
+    end
+end
+puts
+=begin
+chiffres = [0,1,2,3,4,5,6,7,8,9]
+i=0
+j=0
+k=0
+l=0
+n=0
+nombres = []
+while i < chiffres.length
+    nombres[n] = "#{chiffres[i]}" + "#{chiffres[j]}" + " #{chiffres[k]}" + "#{chiffres[l]}"
+    l+=1
+    if l == chiffres.length
+        l=0
+        k+=1
+    end
+    if k == chiffres.length
+        k=0
+        j+=1
+    end
+    if j == chiffres.length
+    j=0
+    i+=1
+    end
+    n+=1
+=end
 
 #5. Affichage
-puts nombres.join(", ")
+#puts nombres.join(", ")
