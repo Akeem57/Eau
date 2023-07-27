@@ -18,11 +18,11 @@ les uns des autres.
 =end
 
 # 1. Les fonctions
-def array3DigitNumber(min, max)
+def array_three_digit_number(min, max)
     (min..max).map {|digit| "%03d" % digit}
 end
 
-def has2SameDigit? (value)
+def is_twoo_same_digit? (value)
     (0..value.length).each do |index|
         if value[index] == value[index+1] \
             || value[index+1] == value[index+2] \
@@ -34,7 +34,7 @@ def has2SameDigit? (value)
     end
 end
 
-def hasSameDigitBetween2Numbers? (num1, num2)
+def is_same_digit_between_numbers? (num1, num2)
     num1 = num1.to_s.split('')
     num2 = num2.to_s.split('')
     if (num1 & num2).size == 3
@@ -50,11 +50,11 @@ end
 # 3. Le parse
 
 # 4. La résolution
-numbers = array3DigitNumber(0,999)
+numbers = array_three_digit_number(0,999)
 
 finalArray = []
 numbers.each do |num|
-    if !has2SameDigit?(num) && !finalArray.any? { |other_num| hasSameDigitBetween2Numbers?(num, other_num) }
+    if !is_twoo_same_digit?(num) && !finalArray.any? { |other_num| is_same_digit_between_numbers?(num, other_num) }
         finalArray << num
     end
 end
