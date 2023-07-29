@@ -18,14 +18,14 @@ def give_x_number_from_fibonacci(arg)
     return result[arg]
 end
 #2. Erreur
-
-#3. Parse
-arg = ARGV[0].to_i
-#4. Résolution
 if arg<0 || ARGV[0].to_i.to_s != ARGV[0]
     puts "-1"
     exit
 end
+#3. Parse
+arg = ARGV[0].to_i
+#4. Résolution
+
 
 #5. Affichage
 puts give_x_number_from_fibonacci(arg)

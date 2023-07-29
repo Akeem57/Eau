@@ -10,7 +10,9 @@ Afficher -1 si le paramètre est négatif ou mauvais.
 =end
 
 #1. Fonctions
- 
+def show_nextfirst_entire_number_fromarg(arg)
+    
+end
 #2. Erreur
 
 #3. Parse
