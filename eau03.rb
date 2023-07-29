@@ -10,11 +10,21 @@ Afficher -1 si le paramètre est négatif ou mauvais.
 =end
 
 #1. Fonctions
- 
+def give_x_number_from_fibonacci(arg)
+    result = [0,1,1,2]
+    for i in 3..arg     #traduction : pour chaque valeur de i allant de 3 jusqu'à la valeur de arg
+        result[i] = result[i-1] + result[i-2]
+    end
+    return result[arg]
+end
 #2. Erreur
 
 #3. Parse
-
+arg = ARGV[0].to_i
 #4. Résolution
+if arg<0
+    print "-1"
+end
 
 #5. Affichage
+puts give_x_number_from_fibonacci(arg)
