@@ -22,8 +22,9 @@ end
 #3. Parse
 arg = ARGV[0].to_i
 #4. Résolution
-if arg<0
-    print "-1"
+if arg<0 || ARGV[0].to_i.to_s != ARGV[0]
+    puts "-1"
+    exit
 end
 
 #5. Affichage
