@@ -18,5 +18,8 @@ end
 #3. Parse
 
 #4. Résolution
-
+arg = ARGV[0].to_i
+n = (0..arg)
+arg.each do |number|
+    if number + 1 % n
 #5. Affichage
