@@ -10,16 +10,35 @@ Afficher -1 si le paramètre est négatif ou mauvais.
 =end
 
 #1. Fonctions
-def show_nextfirst_entire_number_fromarg(arg)
-    
+def find_first_next_primary_number(arg)  
+    denominateur = (2..arg).to_a
+    i=0
+    long_denominateur = denominateur.length
+    result =[]
+    while i < long_denominateur
+        result[i] = arg % denominateur[i]    
+        if i == long_denominateur - 1 || result == 0
+            arg = arg + 1
+            i=0
+        elsif
+            i == long_denominateur -1 && result != 0
+            return arg
+        else 
+            i+=1
+        end
+    end
+    return arg
 end
 #2. Erreur
 
 #3. Parse
-
+arg=ARGV[0].to_i
 #4. Résolution
+<<<<<<< HEAD
 arg = ARGV[0].to_i
-n = (0..arg)
-arg.each do |number|
-    if number + 1 % n
 #5. Affichage
+=======
+resultat = find_first_next_primary_number(arg)
+#5. Affichage
+puts result
+>>>>>>> 4fec4e2 (5/08 06:35)
