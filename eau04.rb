@@ -34,11 +34,6 @@ end
 #3. Parse
 arg=ARGV[0].to_i
 #4. Résolution
-<<<<<<< HEAD
-arg = ARGV[0].to_i
-#5. Affichage
-=======
 resultat = find_first_next_primary_number(arg)
 #5. Affichage
 puts result
->>>>>>> 4fec4e2 (5/08 06:35)
