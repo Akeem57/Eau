@@ -10,30 +10,27 @@ Afficher -1 si le paramètre est négatif ou mauvais
 =end
 
 #1. Fonctions
-def find_first_next_primary_number(arg)  
-    denominateur = (2..arg).to_a
-    i=0
-    long_denominateur = denominateur.length
-    result =[]
-    while i < long_denominateur
-        result[i] = arg % denominateur[i]    
-        if i == long_denominateur - 1 || result == 0
-            arg = arg + 1
-            i=0
-        elsif
-            i == long_denominateur -1 && result != 0
-            return arg
-        else 
-            i+=1
-        end
-    end
-    return arg
+def is_prime?(num)
+    (2..Math.sqrt(num)).none? { |i| num % i == 0 } #.none? = ne staisfait pas à la condition entre {}
 end
-#2. Erreur
 
+def find_first_next_primary_number(arg)
+    arg = arg.to_i
+    return -1 if arg < 0 
+    while true
+        arg += 1
+        return arg if is_prime?(arg)
+    end
+end
+
+#2. Erreur
+if ARGV[0].to_i.to_s != ARGV[0]
+    puts -1
+    exit
+end
 #3. Parse
-arg=ARGV[0].to_i
+arg = ARGV[0].to_i
 #4. Résolution
 resultat = find_first_next_primary_number(arg)
 #5. Affichage
-puts result
+puts resultat
