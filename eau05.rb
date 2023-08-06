@@ -14,3 +14,21 @@ error
 Afficher error et quitter le programme en cas de problèmes d’arguments
 =end
 
+def regex(r)
+    r = Regexp.new(r) #Regexp.new : crée une regex personalisée
+    return r
+end
+
+begin
+    if regex(ARGV[1]).match?(ARGV[0])
+        puts "true"
+        exit
+    else
+        puts "error"
+        exit
+    end
+rescue
+    puts "error"
+    exit
+end
+
