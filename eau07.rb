@@ -10,3 +10,23 @@ error
 
 Afficher error et quitter le programme en cas de problèmes d’arguments.
 =end
+
+
+if (ARGV.length != 1) || (ARGV[0].match?(/[0-9]/))
+    puts "error"
+    exit
+end
+  
+ 
+input_string = ARGV[0]
+  
+  
+def capitalize_first_letter(arg)
+    words = arg.split(/[ \t\n]/) # Séparation en mots en utilisant espaces, tabulations et retours à la ligne comme délimiteurs
+    capitalized_words = words.map { |word| word.capitalize }
+    capitalized_words.join(' ')
+end
+  
+  
+result = capitalize_first_letter(input_string)
+puts result
