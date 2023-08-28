@@ -13,3 +13,8 @@ error
 
 Afficher error et quitter le programme en cas de problèmes d’arguments.
 =end
+
+if (ARGV.length <= 1) || (!ARGV.all? { |arg| arg.match?(/\A\d+\z/) })
+    puts "error"
+end
+
