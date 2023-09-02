@@ -13,3 +13,20 @@ $> python exo.py test boom
 
 Afficher error et quitter le programme en cas de problèmes d’arguments.
 =end
+
+if ARGV.length < 2
+    puts "error"
+    exit
+end
+
+def trouver_index(tableau, element_recherche)
+    tableau.index(element_recherche)
+end
+
+arguments = ARGV
+looking_word = ARGV[-1] # ou ARGV.pop
+sentence = ARGV[0..-2]
+
+index = trouver_index(sentence, looking_word)
+
+puts index || -1
