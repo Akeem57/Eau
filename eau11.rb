@@ -2,7 +2,7 @@
 Créez un programme qui affiche la différence minimum absolue entre deux éléments d’un tableau constitué uniquement de nombres. Nombres négatifs acceptés.
 
 Exemples d’utilisation :
-$> python exo.py 5 1 19 21
+$> python exo.py 5 1 19 21 
 2
 
 $> python exo.py 20 5 1 19 21
