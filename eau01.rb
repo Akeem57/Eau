@@ -1,6 +1,6 @@
 =begin
 Créez un programme qui affiche toutes les différentes combinaisons de deux nombre entre 
-00 et 99 dans l’ordre croissant.
+00 et 99 dans l’ordre croissant
 
 
 Exemples d’utilisation :
