@@ -6,7 +6,7 @@ $> python exo.py 14
 17
 $>
 
-Afficher -1 si le paramètre est négatif ou mauvais
+Afficher -1 si le paramètre est négatif ou mauvais.
 =end
 
 #1. Fonctions
