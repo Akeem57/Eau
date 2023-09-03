@@ -13,3 +13,21 @@ $> python exo.py -8 -6 4
 
 Afficher error et quitter le programme en cas de problèmes d’arguments.
 =end
+
+if ARGV.length < 2 || ARGV.any?{|arg| !arg.match?(/\A-?\d+\z/)}
+    puts "error"
+    exit
+end
+
+def calculate_min_absolute_diff(args)
+    results =[]
+    args.each do |num1|
+        args.each do |num2|
+            next if num1 == num2
+            results << (num1.to_i.abs - num2.to_i.abs).abs
+        end
+    end
+    results.min
+end
+
+puts calculate_min_absolute_diff(ARGV)
