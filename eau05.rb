@@ -5,7 +5,7 @@ Exemples d’utilisation :
 $> python exo.py bonjour jour
 true
 
-$> python exo.py bonjour joure
+$> python exo.py bonjour jouree
 false
 
 $> python exo.py 42
