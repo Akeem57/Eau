@@ -2,7 +2,7 @@
 Créez un programme qui détermine si une chaîne de caractères ne contient que des chiffres.
 
 Exemples d’utilisation :
-$> python exo.py “4445353”
+$> python exo.py “44453532”
 true
 
 $> python exo.py 42
