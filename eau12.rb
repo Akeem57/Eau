@@ -8,8 +8,8 @@ my_bubble_sort(array) {
 }
 
 Exemples d’utilisation :
-$> python exo.py 6 5 4 3 2 1
-1 2 3 4 5 6
+$> python exo.py 6 5 4 3 2 1 0
+0 1 2 3 4 5 6
 
 $> python exo.py test test test
 error
