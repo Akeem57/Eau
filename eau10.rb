@@ -5,7 +5,7 @@ Exemples d’utilisation :
 $> python exo.py Ceci est le monde qui contient Charlie un homme sympa Charlie
 6
 
-$> python exo.py test test test
+$> python exo.py test test test test
 0
 
 $> python exo.py test boom
