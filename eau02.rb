@@ -11,8 +11,8 @@ $> python exo.py ha ho
 ho
 ha
 
-$> python exo.py “Bonjour 36”
-Bonjour 36
+$> python exo.py “Bonjour 38”
+Bonjour 38
 
 Afficher error et quitter le programme en cas de problèmes d’arguments.
 =end
